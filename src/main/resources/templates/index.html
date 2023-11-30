@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="zh-cnm-Hans">
+<head>
+    <title>在线Huffman编解码系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css"/>
+    <script src="/webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <style>
+        .wrapper {
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div>
+            <h1>在线Huffman编解码系统</h1>
+        </div>
+        <div style="width: 100%">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">编码
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                            type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">解码
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                     tabindex="0">
+                    <div style="width: 100%">
+                        <div class="row">
+                            <div class="col">
+                                <form action="/encode" method="post" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="file" class="form-label">选择文件</label>
+                                        <input class="form-control" type="file" id="file" name="file"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary" type="submit">上传</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                     tabindex="0">
+                    <div style="width: 100%">
+                        <div class="row">
+                            <div class="col">
+                                <form action="/decode" method="post" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="file" class="form-label">选择文件</label>
+                                        <input class="form-control" type="file" id="file" name="file"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary" type="submit">上传</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
